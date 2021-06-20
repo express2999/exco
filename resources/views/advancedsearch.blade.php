@@ -1,10 +1,13 @@
 @include('navbar')
 <html>
 <head>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"
+            integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
 
     <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <style>
@@ -17,10 +20,11 @@
             background-position: center center;
             background-size: cover;
             background-attachment: fixed;
-            box-shadow:inset 0 0 0 2000px rgba(255, 255, 255, 0.0);
+            box-shadow: inset 0 0 0 2000px rgba(255, 255, 255, 0.0);
             animation: shrink 25s infinite alternate;
-            margin_bottom:150px;
+            margin_bottom: 150px;
         }
+
         @keyframes shrink {
             0% {
                 background-size: 130% 130%;
@@ -43,13 +47,21 @@
 
         /* Safari */
         @-webkit-keyframes spin {
-            0% { -webkit-transform: rotate(0deg); }
-            100% { -webkit-transform: rotate(360deg); }
+            0% {
+                -webkit-transform: rotate(0deg);
+            }
+            100% {
+                -webkit-transform: rotate(360deg);
+            }
         }
 
         @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
         }
 
         /* enable absolute positioning */
@@ -67,12 +79,22 @@
         }
 
         /* align glyph */
-        .left-addon .glyphicon  { left:  0px;}
-        .right-addon .glyphicon { right: 0px;}
+        .left-addon .glyphicon {
+            left: 0px;
+        }
+
+        .right-addon .glyphicon {
+            right: 0px;
+        }
 
         /* add padding  */
-        .left-addon input  { padding-left:  30px; }
-        .right-addon input { padding-right: 30px; }
+        .left-addon input {
+            padding-left: 30px;
+        }
+
+        .right-addon input {
+            padding-right: 30px;
+        }
 
         /* Solid border */
         hr.solid {
@@ -80,40 +102,81 @@
             width: 50%;
         }
 
-        .responsive{
-            max-width:100%;
-            max-height:100%;
+        .responsive {
+            max-width: 100%;
+            max-height: 100%;
         }
 
 
         @media only screen and (max-width: 1500px) {
-            .responsive{
+            .responsive {
                 float: left;
                 width: 33.33%;
                 padding: 5px;
             }
-            .onlyforme{
+
+            .onlyforme {
                 margin-top: 0px;
             }
         }
 
-        table{
+        table {
             border: 1px solid gray;
         }
-        tbody{
+
+        tbody {
             border: 1px solid gray;
         }
-        tr{
+
+        tr {
             border: 1px solid gray;
         }
-        th{
+
+        th {
             border: 1px solid gray;
             color: aliceblue;
         }
-        td{
+
+        td {
             border: 1px solid gray;
             color: white;
             font-weight: bold;
+        }
+
+        form.example input[type=text] {
+            height: 100px;
+            padding: 10px;
+            font-size: 17px;
+            border: 1px solid grey;
+            border-radius: 5px 0 0px 5px;
+            border-right: none;
+            float: left;
+            width: 80%;
+            background: white;
+        }
+
+        form.example button {
+            height: 100px;
+            float: left;
+            width: 20%;
+            padding: 10px;
+            background: white;
+            color: white;
+            font-size: 17px;
+            border: 1px solid grey;
+            border-radius: 0px 5px 5px 0px;
+            border-left: none;
+            cursor: pointer;
+        }
+
+        form.example button:hover {
+            background: white;
+        }
+
+        form.example::after {
+            content: "";
+            clear: both;
+            display: table;
         }
     </style>
 
@@ -122,21 +185,39 @@
 
 <body>
 <div class="container">
-    <center><div class="" style="">
-            <div class="">
-                <h2 class="" style="text-align: left;font-weight: 700;font-size: 20px;color: white;">EXCO FILTERS CATALOGUE</h2>
+    @if (\Session::has('noitems'))
+        <div class="text-center">
+            <div class="alert alert-success">
+                <span style="color:red;font-size: 30px;"><i class="fa fa-warning" style="font-size:48px;"></i>&nbsp;&nbsp;{!! \Session::get('noitems') !!}</span>
             </div>
-            <form method="GET" action="{{Route('mego')}}">
+        </div>
+    @endif
+    <center>
+        <div class="" style="">
+            <a href="https://excofilter.com" target="_blank"><p style="color:white; font-size: 30px; font-weight: bold">
+                    <u><i class="fa fa-arrow-left" aria-hidden="true"></i> Back To ExcoFilter</u></p></a>
+            <div class="">
+                <h2 class="" style="text-align: left;font-weight: 700;font-size: 20px;color: white;">EXCO FILTERS
+                    CATALOGUE</h2>
+            </div>
+            <form autocomplete="off" method="GET" class="example" action="{{Route('mego')}}">
 
-                <div class="inner-addon right-addon">
-                    <i class="glyphicon glyphicon-search"></i>
-                    <input type="text" class="form-control" name="myid" placeholder="Search catalogue..."  style="height: 70px;"/>
+                <div class="autocomplete" style="width:100%;text-align: center;">
+                    <input id="myid" type="text" name="myid" placeholder="Search Catalogue ..." required>
+                    <button type="submit" id="#submitme"><i class="fa fa-search fa-2x" style="color: gray;"></i>
+                    </button>
+                    <div id="countryList" class="countryList"></div>
+                    <div class="loader" id="loader" style="display: none;"></div>
+
+                    {{--               {{ csrf_field() }}--}}
                 </div>
 
 
             </form>
             <!-- final table -->
-            <center><a href="{{Route('mainpage')}}"><p style="color:white;font-size: 25px; "><u><i class="fa fa-arrow-left" aria-hidden="true"></i> Back To Main Search</u></p></a></center>
+            <center><a href="{{Route('mainpage')}}"><p style="color:white;font-size: 25px; "><u><i
+                                class="fa fa-arrow-left" aria-hidden="true"></i> Back To Main Search</u></p></a>
+            </center>
             <div class="row">
                 <div class="col-md-5" style="text-align: left;">
                     <h3 class="" style="font-weight: 700;font-size: 25px;color: white;">Application type</h3>
@@ -144,7 +225,8 @@
                     <div class="row">
                         <div class="col-md-4 responsive"><img src="{{ asset("/images/car.png")}}" width="100%"></div>
                         <div class="col-md-4 responsive"><img src="{{ asset("/images/truck.png")}}" width="100%"></div>
-                        <div class="col-md-4 responsive"><img src="{{ asset("/images/collection.png")}}" width="100%"></div>
+                        <div class="col-md-4 responsive"><img src="{{ asset("/images/collection.png")}}" width="100%">
+                        </div>
                     </div>
 
                 </div>
@@ -241,13 +323,16 @@
                         <br>
 
 
-
                         <div class="col-md-12 text-center">
-                            <button class="btn btn-primary btn-lg" style="background-color: #00387b;" id="search"><i class="fa fa-search"></i> Search</button>
+                            <button class="btn btn-primary btn-lg" style="background-color: #00387b;" id="search"><i
+                                    class="fa fa-search"></i> Search
+                            </button>
                         </div>
-                    </div><br><br><br><br><br><br>
+                    </div>
+                    <br><br><br><br><br><br>
 
-                </div></center>
+                </div>
+            </center>
 
 
             @if (\Session::has('noitem'))
@@ -259,7 +344,9 @@
             @endif
             @if(isset($alldata) && $alldata -> count() > 0)
 
-                <center><div class="panel panel-primary" style="width: 100%;height:30%;background-color: rgba(255, 255, 255, 0.2);">
+                <center>
+                    <div class="panel panel-primary"
+                         style="width: 100%;height:30%;background-color: rgba(255, 255, 255, 0.2);">
                         <div class="panel-heading" style="background-color:#00387b;border-color: #00387b;">
                             Information <i class="fa fa-info"></i>
                         </div>
@@ -298,8 +385,11 @@
                                 </tbody>
                             </table>
                         </div>
-                    </div></center>
-                <center><a href="{{Route('advancedsearch')}}"><button class="btn btn-primary" style="background-color: #00387b; id="clear"><i class="fa fa-trash"></i> Clear Search</button></a></center>
+                    </div>
+                </center>
+                <center><a href="{{Route('advancedsearch')}}">
+                        <button class="btn btn-primary" style="background-color: #00387b; id=" clear
+                        "><i class="fa fa-trash"></i> Clear Search</button></a></center>
                 <br><br><br><br><br><br>
 
 
@@ -366,7 +456,6 @@
     });
 
 
-
     /*model*/
 
     jQuery('select[name="make"]').on('change', function () {
@@ -393,7 +482,6 @@
             $('select[name="model"]').empty();
         }
     });
-
 
 
     /*model serial number*/
@@ -548,8 +636,7 @@
 
 <script type="text/javascript">
 
-    $("#search").on("click", function ()
-    {
+    $("#search").on("click", function () {
         var manufacturer = document.getElementById("manufacturer").value;
         var equipmentType = document.getElementById("equipmentType").value;
         var make = document.getElementById("make").value;
@@ -561,7 +648,7 @@
         var year = document.getElementById("year").value;
 
         $.ajax({
-            url: window.location.href="getData/"+manufacturer+"/"+equipmentType+"/"+make+"/"+model+"/"+modelSN+"/"+engineManufacturer+"/"+engine+"/"+engineSerial+"/"+year,
+            url: window.location.href = "getData/" + manufacturer + "/" + equipmentType + "/" + make + "/" + model + "/" + modelSN + "/" + engineManufacturer + "/" + engine + "/" + engineSerial + "/" + year,
         });
     });
 

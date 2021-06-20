@@ -109,7 +109,17 @@
 
 <body>
 <!-- final table -->
-<center><a href="{{Route('mainpage')}}"><p style="color:#00387b; "><u><i class="fa fa-arrow-left"
+
+<center>
+    @if (\Session::has('noitems'))
+        <div class="text-center">
+            <div class="alert alert-success">
+                <span style="color:red;font-size: 30px;"><i class="fa fa-warning" style="font-size:48px;"></i>&nbsp;&nbsp;{!! \Session::get('noitems') !!}</span>
+            </div>
+        </div>
+    @endif
+
+    <a href="{{Route('mainpage')}}"><p style="color:#00387b; "><u><i class="fa fa-arrow-left"
                                                                          aria-hidden="true"></i> Back To Main Search</u>
         </p></a>
     <form autocomplete="off" method="GET" class="example" action="{{Route('mego')}}">
@@ -369,14 +379,7 @@
 
     </div>
 </center>
-@if (\Session::has('noitems'))
-    <div class="text-center">
-        <div class="alert alert-success">
-            <span style="color:red;font-size: 30px;"><i class="fa fa-warning" style="font-size:48px;"></i>&nbsp;&nbsp;{!! \Session::get('noitems') !!}</span>
-        </div>
-    </div>
 
-@endif
 
 <!-- Modal -->
 {{--<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">--}}

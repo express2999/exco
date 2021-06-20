@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i,800,800i">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
 
 
     <style>
@@ -22,9 +23,10 @@
             background-position: center center;
             background-size: cover;
             background-attachment: fixed;
-            box-shadow:inset 0 0 0 2000px rgba(255, 255, 255, 0.0);
+            box-shadow: inset 0 0 0 2000px rgba(255, 255, 255, 0.0);
             animation: shrink 25s infinite alternate;
         }
+
         @keyframes shrink {
             0% {
                 background-size: 130% 130%;
@@ -49,13 +51,21 @@
 
         /* Safari */
         @-webkit-keyframes spin {
-            0% { -webkit-transform: rotate(0deg); }
-            100% { -webkit-transform: rotate(360deg); }
+            0% {
+                -webkit-transform: rotate(0deg);
+            }
+            100% {
+                -webkit-transform: rotate(360deg);
+            }
         }
 
         @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
         }
 
         /******* Loading *******/
@@ -68,6 +78,7 @@
             padding-bottom: 3rem;
 
         }
+
         .blog_section .blog_content .blog_item {
             margin-bottom: 30px;
             box-shadow: 0 0 11px 0 rgba(6, 22, 58, 0.14);
@@ -76,17 +87,21 @@
             overflow: hidden;
 
         }
+
         .blog_section .blog_content .blog_item:hover .blog_image img {
             transform: scale(1.1);
         }
+
         .blog_section .blog_content .blog_item .blog_image {
             overflow: hidden;
             padding: 0;
         }
+
         .blog_section .blog_content .blog_item .blog_image img {
             width: 100%;
             transition: transform 0.5s ease-in-out;
         }
+
         .blog_section .blog_content .blog_item .blog_image span i {
             position: absolute;
             z-index: 2;
@@ -102,9 +117,11 @@
             clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 79%, 0 100%);
             background-color: #ff5e14;
         }
+
         .blog_section .blog_content .blog_item .blog_details {
             padding: 25px 20px 30px 20px;
         }
+
         .blog_section .blog_content .blog_item .blog_details .blog_title h5 a {
             color: #020d26;
             margin-top: 0;
@@ -115,27 +132,33 @@
             transition: all 0.3s;
             text-decoration: none;
         }
+
         .blog_section .blog_content .blog_item .blog_details .blog_title h5 a:hover {
             color: #ff5e14;
         }
+
         .blog_section .blog_content .blog_item .blog_details ul {
             padding: 0 3px 10px 0;
             margin: 0;
         }
+
         .blog_section .blog_content .blog_item .blog_details ul li {
             display: inline-block;
             padding-right: 15px;
             position: relative;
             color: #7f7f7f;
         }
+
         .blog_section .blog_content .blog_item .blog_details ul li i {
             padding-right: 7px;
         }
+
         .blog_section .blog_content .blog_item .blog_details p {
             border-top: 1px solid #e5e5e5;
             margin-top: 4px;
             padding: 20px 0 4px;
         }
+
         .blog_section .blog_content .blog_item .blog_details a {
             font-size: 16px;
             display: inline-block;
@@ -144,16 +167,20 @@
             text-decoration: none;
             transition: all 0.3s;
         }
+
         .blog_section .blog_content .blog_item .blog_details a:hover {
             color: #020d26;
         }
+
         .blog_section .blog_content .blog_item .blog_details a i {
             vertical-align: middle;
             font-size: 20px;
         }
+
         .blog_section .blog_content .owl-nav {
             display: block;
         }
+
         .blog_section .blog_content .owl-nav .owl-prev {
             position: absolute;
             left: -27px;
@@ -169,16 +196,19 @@
             transition: all 0.3s;
             color: #fff;
         }
+
         .blog_section .blog_content .owl-nav .owl-prev span {
             font-size: 25px;
             margin-top: -6px;
             display: inline-block;
         }
+
         .blog_section .blog_content .owl-nav .owl-prev:hover {
             background: #fff;
             border-color: #ff5e14;
             color: #ff5e14;
         }
+
         .blog_section .blog_content .owl-nav .owl-next {
             position: absolute;
             right: -27px;
@@ -194,11 +224,13 @@
             color: #fff;
             transition: all 0.3s;
         }
+
         .blog_section .blog_content .owl-nav .owl-next span {
             font-size: 25px;
             margin-top: -6px;
             display: inline-block;
         }
+
         .blog_section .blog_content .owl-nav .owl-next:hover {
             background: #fff;
             border-color: #ff5e14;
@@ -209,6 +241,7 @@
             .blog_section .owl-nav .owl-prev {
                 left: -17px !important;
             }
+
             .blog_section .owl-nav .owl-next {
                 right: -17px !important;
             }
@@ -224,35 +257,36 @@
         }
 
 
-        .responsive{
-            max-width:100%;
-            max-height:100%;
+        .responsive {
+            max-width: 100%;
+            max-height: 100%;
         }
 
-        .onlyforme{
+        .onlyforme {
             margin-top: -200px;
         }
 
 
         @media only screen and (max-width: 1500px) {
-            .responsive{
+            .responsive {
                 float: left;
                 width: 33.33%;
                 padding: 5px;
             }
-            .onlyforme{
+
+            .onlyforme {
                 margin-top: 0px;
             }
         }
 
-        .center{
+        .center {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
         }
 
-        parent{
+        parent {
             position: relative;
         }
 
@@ -296,6 +330,7 @@
             clear: both;
             display: table;
         }
+
         /*the container must be positioned relative:*/
         .autocomplete {
             position: relative;
@@ -332,21 +367,23 @@
             color: #ffffff;
         }
 
-        .owlpadding{
+        .owlpadding {
             padding: 75px;
         }
 
         @media only screen and (max-width: 600px) {
-            .responsive{
-                max-width:100%;
-                max-height:100%;
+            .responsive {
+                max-width: 100%;
+                max-height: 100%;
                 display: inline-block;
                 justify-content: center;
             }
-            .onlyforme{
+
+            .onlyforme {
                 margin-top: 0px;
             }
-            .owlpadding{
+
+            .owlpadding {
                 padding: 0px;
             }
         }
@@ -369,16 +406,20 @@
 @endif
 
 <div class="container">
-    <center><div class="">
-            <a href="https://excofilter.com" target="_blank"><p style="color:white; font-size: 30px; font-weight: bold"><u><i class="fa fa-arrow-left" aria-hidden="true"></i> Back To ExcoFilter</u></p></a>
+    <center>
+        <div class="">
+            <a href="https://excofilter.com" target="_blank"><p style="color:white; font-size: 30px; font-weight: bold">
+                    <u><i class="fa fa-arrow-left" aria-hidden="true"></i> Back To ExcoFilter</u></p></a>
             <div class="">
-                <h2 class="" style="text-align: left;font-weight: 700;font-size: 20px;color: white;">EXCO FILTERS CATALOGUE</h2>
+                <h2 class="" style="text-align: left;font-weight: 700;font-size: 20px;color: white;">EXCO FILTERS
+                    CATALOGUE</h2>
             </div>
             <form autocomplete="off" method="GET" class="example" action="{{Route('mego')}}">
 
                 <div class="autocomplete" style="width:100%;text-align: center;">
                     <input id="myid" type="text" name="myid" placeholder="Search Catalogue ..." required>
-                    <button type="submit" id="#submitme"><i class="fa fa-search fa-2x" style="color: gray;"></i></button>
+                    <button type="submit" id="#submitme"><i class="fa fa-search fa-2x" style="color: gray;"></i>
+                    </button>
                     <div id="countryList" class="countryList"></div>
                     <div class="loader" id="loader" style="display: none;"></div>
 
@@ -401,9 +442,12 @@
                     <h3 class="" style="font-weight: 700;font-size: 20px;color: white;">Application type</h3>
                     <hr class="solid" style="margin-left: 0px;">
                     <div class="row">
-                        <div class="col-md-4 responsive"><a href="{{Route('advancedsearch')}}"><img src="{{ asset("/images/car.png")}}" width="100%"></a></div>
-                        <div class="col-md-4 responsive"><a href="{{Route('advancedsearch')}}"><img src="{{ asset("/images/truck.png")}}" width="100%"></a></div>
-                        <div class="col-md-4 responsive"><a href="{{Route('advancedsearch')}}"><img src="{{ asset("/images/collection.png")}}" width="100%"></a></div>
+                        <div class="col-md-4 responsive"><a href="{{Route('advancedsearch')}}"><img
+                                    src="{{ asset("/images/car.png")}}" width="100%"></a></div>
+                        <div class="col-md-4 responsive"><a href="{{Route('advancedsearch')}}"><img
+                                    src="{{ asset("/images/truck.png")}}" width="100%"></a></div>
+                        <div class="col-md-4 responsive"><a href="{{Route('advancedsearch')}}"><img
+                                    src="{{ asset("/images/collection.png")}}" width="100%"></a></div>
                     </div>
 
                 </div>
@@ -440,22 +484,40 @@
                         <div class="owl-carousel owl-theme">
                             <div class="blog_item">
                                 <div class="blog_image">
-                                    <img class="img-fluid" src="http://excofilter.com/wp-content/uploads/filterwithdet.png" alt="images not found">
-                                    <center><a href="http://excofilter.com/resources/"><div class="col-md-12" style="background-color:#00387b;color:white;height: 8%;font-weight:700;font-size:17px;"><p><br>Download Now<br></p></div></a></center>
+                                    <img class="img-fluid"
+                                         src="http://excofilter.com/wp-content/uploads/filterwithdet.png"
+                                         alt="images not found">
+                                    <center><a href="http://excofilter.com/resources/">
+                                            <div class="col-md-12"
+                                                 style="background-color:#00387b;color:white;height: 8%;font-weight:700;font-size:17px;">
+                                                <p><br>Download Now<br></p></div>
+                                        </a></center>
                                 </div>
 
                             </div>
                             <div class="blog_item">
                                 <div class="blog_image">
-                                    <img class="img-fluid" src="http://excofilter.com/wp-content/uploads/filterwithdet.png" alt="images not found">
-                                    <center><a href="http://excofilter.com/resources/"><div class="col-md-12" style="background-color:#00387b;color:white;height: 8%;font-weight:700;font-size:17px;"><p><br>Download Now<br></p></div></a></center>
+                                    <img class="img-fluid"
+                                         src="http://excofilter.com/wp-content/uploads/filterwithdet.png"
+                                         alt="images not found">
+                                    <center><a href="http://excofilter.com/resources/">
+                                            <div class="col-md-12"
+                                                 style="background-color:#00387b;color:white;height: 8%;font-weight:700;font-size:17px;">
+                                                <p><br>Download Now<br></p></div>
+                                        </a></center>
                                 </div>
 
                             </div>
                             <div class="blog_item">
                                 <div class="blog_image">
-                                    <img class="img-fluid" src="http://excofilter.com/wp-content/uploads/filterwithdet.png" alt="images not found">
-                                    <center><a href="http://excofilter.com/resources/"><div class="col-md-12" style="background-color:#00387b;color:white;height: 8%;font-weight:700;font-size:17px;"><p><br>Download Now<br></p></div></a></center>
+                                    <img class="img-fluid"
+                                         src="http://excofilter.com/wp-content/uploads/filterwithdet.png"
+                                         alt="images not found">
+                                    <center><a href="http://excofilter.com/resources/">
+                                            <div class="col-md-12"
+                                                 style="background-color:#00387b;color:white;height: 8%;font-weight:700;font-size:17px;">
+                                                <p><br>Download Now<br></p></div>
+                                        </a></center>
                                 </div>
 
                             </div>
@@ -473,33 +535,69 @@
                         <div class="owl-carousel owl-theme">
                             <div class="blog_item">
                                 <div class="blog_image">
-                                    <img class="img-fluid" src="http://excofilter.com/wp-content/uploads/lx36007-scaled.jpg" alt="images not found">
-                                    <center><div class="col-md-4" style="background-color:#00387b;color:white;height: 7%;font-weight:700;font-size:12px;"><p><br>NEW<br></p></div></center>
-                                    <center><div class="col-md-8" style="background-color:#969595;color:white;height: 7%;"><p><strong>FX10529</strong><br>Cummins 34524</p></div></center>
+                                    <img class="img-fluid"
+                                         src="http://excofilter.com/wp-content/uploads/lx36007-scaled.jpg"
+                                         alt="images not found">
+                                    <center>
+                                        <div class="col-md-4"
+                                             style="background-color:#00387b;color:white;height: 7%;font-weight:700;font-size:12px;">
+                                            <p><br>NEW<br></p></div>
+                                    </center>
+                                    <center>
+                                        <div class="col-md-8" style="background-color:#969595;color:white;height: 7%;">
+                                            <p><strong>FX10529</strong><br>Cummins 34524</p></div>
+                                    </center>
                                 </div>
 
                             </div>
                             <div class="blog_item">
                                 <div class="blog_image">
-                                    <img class="img-fluid" src="http://excofilter.com/wp-content/uploads/LX30002-scaled.jpg" alt="images not found">
-                                    <center><div class="col-md-4" style="background-color:#00387b;color:white;height: 7%;font-weight:700;font-size:12px;"><p><br>NEW<br></p></div></center>
-                                    <center><div class="col-md-8" style="background-color:#969595;color:white;height: 7%;"><p><strong>FX10529</strong><br>Cummins 34524</p></div></center>
+                                    <img class="img-fluid"
+                                         src="http://excofilter.com/wp-content/uploads/LX30002-scaled.jpg"
+                                         alt="images not found">
+                                    <center>
+                                        <div class="col-md-4"
+                                             style="background-color:#00387b;color:white;height: 7%;font-weight:700;font-size:12px;">
+                                            <p><br>NEW<br></p></div>
+                                    </center>
+                                    <center>
+                                        <div class="col-md-8" style="background-color:#969595;color:white;height: 7%;">
+                                            <p><strong>FX10529</strong><br>Cummins 34524</p></div>
+                                    </center>
                                 </div>
 
                             </div>
                             <div class="blog_item">
                                 <div class="blog_image">
-                                    <img class="img-fluid" src="http://excofilter.com/wp-content/uploads/LX11169-2-scaled.jpg" alt="images not found">
-                                    <center><div class="col-md-4" style="background-color:#00387b;color:white;height: 7%;font-weight:700;font-size:12px;"><p><br>NEW<br></p></div></center>
-                                    <center><div class="col-md-8" style="background-color:#969595;color:white;height: 7%;"><p><strong>FX10529</strong><br>Cummins 34524</p></div></center>
+                                    <img class="img-fluid"
+                                         src="http://excofilter.com/wp-content/uploads/LX11169-2-scaled.jpg"
+                                         alt="images not found">
+                                    <center>
+                                        <div class="col-md-4"
+                                             style="background-color:#00387b;color:white;height: 7%;font-weight:700;font-size:12px;">
+                                            <p><br>NEW<br></p></div>
+                                    </center>
+                                    <center>
+                                        <div class="col-md-8" style="background-color:#969595;color:white;height: 7%;">
+                                            <p><strong>FX10529</strong><br>Cummins 34524</p></div>
+                                    </center>
                                 </div>
 
                             </div>
                             <div class="blog_item">
                                 <div class="blog_image">
-                                    <img class="img-fluid" src="http://excofilter.com/wp-content/uploads/FX14441-scaled.jpg" alt="images not found">
-                                    <center><div class="col-md-4" style="background-color:#00387b;color:white;height: 7%;font-weight:700;font-size:12px;"><p><br>NEW<br></p></div></center>
-                                    <center><div class="col-md-8" style="background-color:#969595;color:white;height: 7%;"><p><strong>FX10529</strong><br>Cummins 34524</p></div></center>
+                                    <img class="img-fluid"
+                                         src="http://excofilter.com/wp-content/uploads/FX14441-scaled.jpg"
+                                         alt="images not found">
+                                    <center>
+                                        <div class="col-md-4"
+                                             style="background-color:#00387b;color:white;height: 7%;font-weight:700;font-size:12px;">
+                                            <p><br>NEW<br></p></div>
+                                    </center>
+                                    <center>
+                                        <div class="col-md-8" style="background-color:#969595;color:white;height: 7%;">
+                                            <p><strong>FX10529</strong><br>Cummins 34524</p></div>
+                                    </center>
                                 </div>
 
                             </div>
@@ -510,8 +608,7 @@
             </div>
 
 
-
-</div>
+        </div>
     </center>
 </div>
 <!-- Jquery -->
@@ -525,16 +622,16 @@
 <!-- owl -->
 <script>
     $('.owl-carousel').owlCarousel({
-        loop:true,
-        margin:10,
-        dots:true,
-        nav:true,
-        autoplay:true,
+        loop: true,
+        margin: 10,
+        dots: true,
+        nav: true,
+        autoplay: true,
         smartSpeed: 300,
-        autoplayTimeout:4000,
-        responsive:{
-            0:{
-                items:1
+        autoplayTimeout: 4000,
+        responsive: {
+            0: {
+                items: 1
             }
             /*,
             600:{
@@ -554,39 +651,36 @@
 </script>
 
 <script>
-    $(document).ready(function(){
+    $(document).ready(function () {
 
-        $('#myid').keyup(function(){
+        $('#myid').keyup(function () {
             var query = $(this).val();
             document.getElementById("loader").style.display = "block";
-            if(query != '')
-            {
+            if (query != '') {
                 //var _token = $('input[name="_token"]').val();
                 $.ajax({
-                    url:"{{ route('autocomplete.fetch') }}",
-                    method:"GET",
-                    data:{query:query},
+                    url: "{{ route('autocomplete.fetch') }}",
+                    method: "GET",
+                    data: {query: query},
                     // , _token:_token
-                    success:function(data){
+                    success: function (data) {
                         $('#countryList').fadeIn();
                         $('#countryList').html(data);
-                        if(data != null){
+                        if (data != null) {
                             document.getElementById("loader").style.display = "none";
-                        }else{
+                        } else {
                             document.getElementById("loader").style.display = "none";
                         }
 
                     }
                 });
-            }
-            else if(query == '')
-            {
+            } else if (query == '') {
                 $('#countryList').fadeOut();
                 document.getElementById("loader").style.display = "none";
             }
         });
 
-        $(document).on('click', 'li', function(){
+        $(document).on('click', 'li', function () {
             $('#myid').val($(this).text());
             $('#countryList').fadeOut();
         });

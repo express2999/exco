@@ -309,6 +309,7 @@ class relations extends Controller
                     ->orwhereBetween('dimensions.od2Inch', [$od2Down, $od2Up])
                     ->orwhereBetween('dimensions.threadInch', [$threadDown, $threadUp])
                     ->orwhereBetween('dimensions.idInch', [$id1Down, $id1Up]);
+
             })
             ->get();
 

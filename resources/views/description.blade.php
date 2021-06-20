@@ -127,7 +127,18 @@
 
 
 <div class="container" style="background-color: white">
-    <center><div class="">
+
+    <center>
+
+        @if (\Session::has('noitems'))
+            <div class="text-center">
+                <div class="alert alert-success">
+                    <span style="color:red;font-size: 30px;"><i class="fa fa-warning" style="font-size:48px;"></i>&nbsp;&nbsp;{!! \Session::get('noitems') !!}</span>
+                </div>
+            </div>
+        @endif
+
+            <div class="">
             <h2 class="" style="text-align: left;font-weight: 700;font-size: 20px;color:  #00387b;;">EXCO FILTERS CATALOGUE</h2>
         </div>
         <form autocomplete="off" method="GET" class="example" action="{{Route('mego')}}">
@@ -140,7 +151,9 @@
             </div>
 
 
-        </form></center><br>
+
+        </form>
+    </center><br>
     <div class="row">
         <div class="col-sm-6" style="background-color: white">
             <!-- Category -->
