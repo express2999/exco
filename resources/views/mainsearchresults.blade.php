@@ -52,14 +52,76 @@
             display:none;
         }
 
+        form.example input[type=text] {
+            height: 100px;
+            padding: 10px;
+            font-size: 17px;
+            border: 1px solid grey;
+            border-radius: 5px 0 0px 5px;
+            border-right: none;
+            float: left;
+            width: 80%;
+            background: white;
+            box-shadow: 25px 25px 25px #888888;
+        }
+
+        form.example button {
+            height: 100px;
+            float: left;
+            width: 20%;
+            padding: 10px;
+            background: white;
+            color: white;
+            font-size: 17px;
+            border: 1px solid grey;
+            border-radius: 0px 5px 5px 0px;
+            border-left: none;
+            cursor: pointer;
+            box-shadow: 25px 25px 25px #888888;
+        }
+
+
+        form.example::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
     </style>
 </head>
 <body>
 
 <div class="container">
-    <!-- <h2>Dynamic Tabs</h2>
-     <p>To make the tabs toggleable, add the data-toggle="tab" attribute to each link. Then add a .tab-pane class with a unique ID for every tab and wrap them inside a div element with class .tab-content.</p>
- -->
+    @if (\Session::has('noitems'))
+        <div class="text-center">
+            <div class="alert alert-success">
+                <span style="color:red;font-size: 30px;"><i class="fa fa-warning" style="font-size:48px;"></i>&nbsp;&nbsp;{!! \Session::get('noitems') !!}</span>
+            </div>
+        </div>
+    @endif
+
+
+        <a href="{{Route('mainpage')}}"><p style="color:#00387b; "><u><i class="fa fa-arrow-left" aria-hidden="true"></i> Back
+                    To Main Search</u></p></a>
+
+        <div class="">
+            <h2 class="" style="text-align: left;font-weight: 700;font-size: 20px;color: white;">EXCO FILTERS
+                CATALOGUE</h2>
+        </div>
+        <form autocomplete="off" method="GET" class="example" action="{{Route('mego')}}">
+
+            <div class="autocomplete" style="width:100%;text-align: center;">
+                <input id="myid" type="text" name="myid" placeholder="Search Catalogue ..." required>
+                <button type="submit" id="#submitme"><i class="fa fa-search fa-2x" style="color: gray;"></i>
+                </button>
+                <div id="countryList" class="countryList"></div>
+                <div class="loader" id="loader" style="display: none;"></div>
+
+                {{--               {{ csrf_field() }}--}}
+            </div>
+
+
+        </form><br><br>
 
     <ul class="nav nav-tabs">
         <li class="active"><a data-toggle="tab" href="#cross">CROSS REFERENCE</a></li>
